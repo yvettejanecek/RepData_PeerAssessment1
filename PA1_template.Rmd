@@ -4,6 +4,7 @@ author: "Yvette Janecek"
 date: "May 8, 2016"
 output: 
   html_document: 
+    fig_caption: yes
     keep_md: yes
 ---
 
