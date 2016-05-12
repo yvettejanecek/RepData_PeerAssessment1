@@ -2,14 +2,11 @@
 title: "Activity Monitoring"
 author: "Yvette Janecek"
 date: "May 8, 2016"
-output: html_document
+output: 
+  html_document: 
+    keep_md: yes
 ---
----
-title: "Activity Monitoring"
-author: "Yvette Janecek"
-date: "May 5, 2016"
-output: html_document
----
+
 ##Reproducible Research Project 1
 
 This project makes use of data from a personal activity monitoring device.  
@@ -33,10 +30,11 @@ library(dplyr)
 library(lattice)
 activity <- read.csv("activity.csv")  #read data
 colnames(activity) <-c("Steps", "Date", "Time_Interval")  #edit column name
+#colClasses(activity) <- c("numeric", "Date", "numeric")
 #interval_hours <- activity$Time_Interval %/% 100 #interval divided by 100 without remainder
 #interval_hours <- ifelse(interval_hours<10, paste("0", interval_hours, sep=""), interval_hours)
 #interval_minutes <- activity$Time_Interval %% 100 #remainder of interval divided by 100
-#interval_minutes <- ifelse(interval_minutes<10, paste("0", interval_minutes, sep=""), interval_minutes)
+#interval_minutes <- ifelse(interval_minutes<10, paste("0", interval_minutes, sep=""), #interval_minutes)
 #interval_time <- paste(interval_hours, interval_minutes, sep=":") #change interval to time format
 #interval_time <- strptime(interval_time, format="%H:%M")
 #activity$Time_Interval <- interval_time
